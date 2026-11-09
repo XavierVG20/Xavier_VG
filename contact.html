@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Contact - VG</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Contacto | Javier VG - Backend & Data Developer</title>
+  <meta content="Ponte en contacto con Kevin Javier Velasque, Desarrollador de Software y Responsable de TI" name="description">
+  <meta content="Laravel, PHP, PostgreSQL, Docker, Contacto, Desarrollador" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/VG.png" rel="icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,500,600,700|Fira+Code:300,400,500&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,12 +26,202 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Kelly - v2.1.1
-  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- Custom Programmer Dark Blue & Particles Styles -->
+  <style>
+    body {
+      background-color: #0a192f !important;
+      color: #8892b0;
+      overflow-x: hidden;
+    }
+    
+    #header {
+      background: rgba(10, 25, 47, 0.95);
+      border-bottom: 1px solid #1e293b;
+      z-index: 10000;
+    }
+
+    #header .logo img {
+      max-height: 40px;
+      filter: drop-shadow(0 0 8px rgba(100, 255, 218, 0.4));
+    }
+
+    #header .nav-menu a {
+      color: #ccd6f6;
+    }
+
+    #header .nav-menu li.active > a, 
+    #header .nav-menu li:hover > a {
+      color: #64ffda;
+    }
+
+    .header-social-links a {
+      color: #a8b2d1;
+    }
+    .header-social-links a:hover {
+      color: #64ffda;
+    }
+
+    main {
+      background-color: #0a192f;
+      padding-top: 80px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Canvas de partículas al frente */
+    #particles-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 3;
+    }
+
+    .section-title h2 {
+      color: #e2e8f0;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      min-height: 40px;
+    }
+
+    .section-title h2::after {
+      background: #64ffda;
+    }
+
+    .section-title p {
+      color: #8892b0;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    /* Cursor de escritura en el título */
+    .cursor-typing {
+      display: inline-block;
+      width: 8px;
+      height: 24px;
+      background-color: #64ffda;
+      margin-left: 4px;
+      vertical-align: middle;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* Contact Section Customization */
+    .contact {
+      background: transparent;
+    }
+
+    .contact iframe {
+      border-radius: 8px;
+      border: 2px solid #233554 !important;
+      filter: invert(90%) hue-rotate(180deg); /* Ajuste oscuro elegante para Google Maps */
+      box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+    }
+
+    .contact .info {
+      background: rgba(17, 34, 64, 0.85);
+      border: 1px solid #233554;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+    }
+
+    .contact .info i {
+      font-size: 20px;
+      color: #64ffda;
+      float: left;
+      width: 44px;
+      height: 44px;
+      background: #1e293b;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      border: 1px solid #334155;
+    }
+
+    .contact .info h4 {
+      padding: 0 0 0 60px;
+      font-size: 18px;
+      font-weight: 600;
+      font-family: 'Raleway', sans-serif;
+      margin-bottom: 5px;
+      color: #e2e8f0;
+    }
+
+    .contact .info p {
+      padding: 0 0 0 60px;
+      margin-bottom: 0;
+      font-size: 14px;
+      color: #8892b0;
+      font-family: 'Fira Code', monospace;
+    }
+
+    .contact .info div {
+      margin-bottom: 25px;
+    }
+
+    .contact .info div:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Formulario de Contacto */
+    .contact .php-email-form {
+      background: rgba(17, 34, 64, 0.85);
+      border: 1px solid #233554;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+    }
+
+    .contact .php-email-form .form-control {
+      background: #0f172a;
+      border: 1px solid #233554;
+      color: #e2e8f0;
+      border-radius: 6px;
+      font-family: 'Open Sans', sans-serif;
+      padding: 12px 15px;
+    }
+
+    .contact .php-email-form .form-control:focus {
+      border-color: #64ffda;
+      box-shadow: 0 0 10px rgba(100, 255, 218, 0.2);
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+
+    .contact .php-email-form textarea {
+      resize: vertical;
+    }
+
+    .contact .php-email-form button[type="submit"] {
+      background: transparent;
+      border: 2px solid #64ffda;
+      color: #64ffda;
+      padding: 10px 30px;
+      font-family: 'Fira Code', monospace;
+      font-weight: 500;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+
+    .contact .php-email-form button[type="submit"]:hover {
+      background: rgba(100, 255, 218, 0.1);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
+    }
+  </style>
 </head>
 
 <body>
@@ -40,34 +230,63 @@
   <header id="header" class="fixed-top">
     <div class="container-fluid d-flex justify-content-between align-items-center">
 
-      <h1 class="logo"><a href="index.html"><img  src="./assets/img/logo.png" alt=""></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+       <h1 class="logo">
+        <a href="index.html" class="logo-svg-link">
+  <svg width="130" height="40" viewBox="0 0 130 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+    <defs>
+      <!-- Efecto de resplandor neón -->
+      <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="2.5" result="blur" />
+        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+      </filter>
+    </defs>
+
+    <!-- Contenedor geométrico tipo nodo / terminal -->
+    <rect x="2" y="4" width="32" height="32" rx="6" fill="#112240" stroke="#64ffda" stroke-width="1.5" filter="url(#neon-glow)" />
+
+    <!-- Iniciales VG dentro del recuadro -->
+    <text x="7" y="26" font-family="'Fira Code', monospace" font-size="17" font-weight="700" fill="#64ffda">
+      <>
+    </text>
+
+    <!-- Texto complementario del logotipo -->
+    <text x="44" y="21" font-family="'Raleway', sans-serif" font-size="13" font-weight="700" fill="#e2e8f0" letter-spacing="0.5px">
+      JAVIER <tspan fill="#64ffda">VG</tspan>
+    </text>
+
+    <text x="44" y="32" font-family="'Fira Code', monospace" font-size="9" font-weight="400" fill="#8892b0">
+      TI &amp; Developer
+    </text>
+
+    <!-- Cursor parpadeante de terminal -->
+    <rect x="119" y="24" width="6" height="2" fill="#64ffda">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
+    </rect>
+  </svg>
+</a>
+      </h1>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="about.html">Perfil</a></li>
           <li><a href="resume.html">Resumen</a></li>
-          <!---
-           <li><a href="services.html">Servicos</a></li>
-          <li><a href="portfolio.html">Portafolio</a></li>
-          -->
-   
-          <li  class="active"><a href="contact.html">Contacto</a></li>
+          <li class="active"><a href="contact.html">Contacto</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
       <div class="header-social-links">
-        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
-        <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
-        <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+        <a href="https://github.com/XavierVG20" class="twitter" target="_blank"><i class="icofont-github"></i></a>
+        <a href="https://www.facebook.com/javier.velasque.562/" class="facebook" target="_blank"><i class="icofont-facebook"></i></a>
+        <a href="https://www.instagram.com/xaviervg20/?hl=es-la" class="instagram" target="_blank"><i class="icofont-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/javier-velasque-a8b7331b1/" class="linkedin" target="_blank"><i class="icofont-linkedin"></i></a>
       </div>
 
     </div>
-
   </header><!-- End Header -->
+
+  <!-- Canvas de partículas al frente -->
+  <canvas id="particles-canvas"></canvas>
 
   <main id="main">
 
@@ -76,12 +295,12 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Contactos</h2>
-<!--          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
--->        </div>
+          <h2><span id="typed-title"></span><span class="cursor-typing"></span></h2>
+          <p>¿Tienes algún proyecto en mente o consulta técnica? Ponte en contacto directo conmigo.</p>
+        </div>
 
         <div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31914.096589239132!2d-78.71305008286325!3d-0.9567530053318496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d48a2bec51b779%3A0x9ea89f01b5e8116b!2zUHVqaWzDrQ!5e0!3m2!1ses-419!2sec!4v1636333459690!5m2!1ses-419!2sec" style="border:0; width: 100%; height: 270px;"  frameborder="0" allowfullscreen></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31914.096589239132!2d-78.71305008286325!3d-0.9567530053318496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d48a2bec51b779%3A0x9ea89f01b5e8116b!2zUHVqaWzDrQ!5e0!3m2!1ses-419!2sec!4v1636333459690!5m2!1ses-419!2sec" style="border:0; width: 100%; height: 270px;" frameborder="0" allowfullscreen></iframe>
         </div>
 
         <div class="row mt-5">
@@ -90,8 +309,8 @@
             <div class="info">
               <div class="address">
                 <i class="icofont-google-map"></i>
-                <h4>Ubiccion:</h4>
-                <p>Pujili</p>
+                <h4>Ubicación:</h4>
+                <p>Pujilí, Cotopaxi, Ecuador</p>
               </div>
 
               <div class="email">
@@ -103,41 +322,38 @@
               <div class="phone">
                 <i class="icofont-phone"></i>
                 <h4>Celular:</h4>
-                <p>0979040582</p>
+                <p>+593 97 904 0583</p>
               </div>
-
             </div>
-
           </div>
 
           <div class="col-lg-8 mt-5 mt-lg-0">
-
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="form-row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Tu Nombre" data-rule="minlen:4" data-msg="Por favor ingresa al menos 4 caracteres" />
                   <div class="validate"></div>
                 </div>
                 <div class="col-md-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Tu Email" data-rule="email" data-msg="Por favor ingresa un email válido" />
                   <div class="validate"></div>
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Por favor ingresa al menos 4 caracteres en el asunto" />
                 <div class="validate"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensaje"></textarea>
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Por favor escribe un mensaje" placeholder="Mensaje..."></textarea>
                 <div class="validate"></div>
               </div>
               <div class="mb-3">
-                <div class="loading">Loading</div>
-                
+                <div class="loading">Cargando...</div>
+                <div class="error-message"></div>
+                <div class="sent-message">¡Tu mensaje ha sido enviado con éxito! Gracias.</div>
               </div>
-              <div class="text-center"><button type="submit">Enviar</button></div>
+              <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
             </form>
-
           </div>
 
         </div>
@@ -146,8 +362,6 @@
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
-
-
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
@@ -166,6 +380,98 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Script de Escritura Automática y Partículas -->
+  <script>
+    // --- 1. Efecto de Escritura y Borrado Automático en el Título Principal ---
+    const titles = [
+      "CONTáctame",
+      "ESTABLECEMOS CONEXIÓN",
+      "DISPONIBLE PARA PROYECTOS"
+    ];
+    
+    let titleIndex = 0;
+
+    function typeTitle() {
+      let currentWord = titles[titleIndex].split("");
+      let loopTyping = function() {
+        if (currentWord.length > 0) {
+          document.getElementById('typed-title').innerHTML += currentWord.shift();
+        } else {
+          setTimeout(deleteTitle, 2200);
+          return;
+        }
+        setTimeout(loopTyping, 90);
+      };
+      loopTyping();
+    }
+
+    function deleteTitle() {
+      let currentWord = titles[titleIndex].split("");
+      let loopDeleting = function() {
+        if (currentWord.length > 0) {
+          currentWord.pop();
+          document.getElementById('typed-title').innerHTML = currentWord.join("");
+        } else {
+          titleIndex = (titleIndex + 1) % titles.length;
+          setTimeout(typeTitle, 500);
+          return;
+        }
+        setTimeout(loopDeleting, 50);
+      };
+      loopDeleting();
+    }
+
+    typeTitle();
+
+
+    // --- 2. Animación de Partículas Pequeñas y Sutiles al Frente ---
+    const canvas = document.getElementById('particles-canvas');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    const codeChars = ['{ }', '</>', '$', '0', '1', 'PHP', 'JS', 'SQL', '[]', '=>', ';', 'fn', 'Docker', 'ML', 'Python'];
+    let particles = [];
+    const particleCount = 35;
+
+    for (let i = 0; i < particleCount; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        text: codeChars[Math.floor(Math.random() * codeChars.length)],
+        speed: 0.5 + Math.random() * 1.5,
+        opacity: 0.15 + Math.random() * 0.35,
+        fontSize: 10 + Math.random() * 4
+      });
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      ctx.fillStyle = '#64ffda';
+      particles.forEach(p => {
+        ctx.globalAlpha = p.opacity;
+        ctx.font = `${p.fontSize}px 'Fira Code', monospace`;
+        ctx.fillText(p.text, p.x, p.y);
+
+        p.y -= p.speed;
+        if (p.y < -20) {
+          p.y = canvas.height + 20;
+          p.x = Math.random() * canvas.width;
+        }
+      });
+
+      requestAnimationFrame(animateParticles);
+    }
+
+    animateParticles();
+  </script>
 
 </body>
 

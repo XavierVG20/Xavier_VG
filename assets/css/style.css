@@ -14,7 +14,7 @@ body {
 }
 
 a {
-  color: #0070aa;
+  color:  #0a192f ;
 }
 
 a:hover {
@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #0070aa;
+  background:  #0a192f ;
 }
 
 #preloader:before {
@@ -101,13 +101,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   border-radius: 50px;
-  background: #529ec5;
+  background:  #0a192f ;
   color: #fff;
   transition: all 0.4s;
 }
 
 .back-to-top i:hover {
-  background: #529ec5;
+  background:  #0a192f ;
   color: #fff;
 }
 
@@ -182,7 +182,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 2px;
   bottom: -5px;
   left: 0;
-  background-color: #529ec5;
+  background-color:  #0a192f ;
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -231,7 +231,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
-  color:#529ec5;
+  color: #0a192f ;
 }
 
 .nav-menu .drop-down > a:after {
@@ -291,7 +291,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-toggle i {
-  color:#529ec5;
+  color: #0a192f ;
 }
 
 .mobile-nav {
@@ -326,7 +326,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color:#529ec5;
+  color: #0a192f ;
   text-decoration: none;
 }
 
@@ -398,7 +398,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-social-links a:hover {
-  color: #529ec5;
+  color:  #0a192f ;
 }
 
 @media (max-width: 992px) {
@@ -413,7 +413,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background-color: #0070aa;
+  background-color:  #0a192f ;
   background: url("../img/home-bg.jpg") top right;
   background-position:center;
   background-repeat:no-repeat;
@@ -464,7 +464,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   margin-top: 60px;
   opacity:1;
-  background-color: #529ec5;
+  background-color:  #0a192f ;
 }
 
 #hero .btn-about:hover {
@@ -528,7 +528,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #529ec5;
+  background:  #0a192f ;
   bottom: 0;
   left: calc(50% - 25px);
 }
@@ -572,7 +572,7 @@ section {
 }
 
 .cta .cta-btn:hover {
-  background:#529ec5;
+  background: #0a192f ;
   border: 2px solid #34b7a7;
 }
 
@@ -612,7 +612,7 @@ section {
 .about .content ul i {
   font-size: 20px;
   padding-right: 2px;
-  color: #529ec5;
+  color:  #0a192f ;
 }
 
 .about .content p:last-child {
@@ -651,7 +651,7 @@ section {
   width: 1px;
   height: 10px;
   transition: .9s;
-  background-color: #0070aa;
+  background-color:  #0a192f ;
 }
 
 /*--------------------------------------------------------------
@@ -660,7 +660,7 @@ section {
 .facts .counters span {
   font-size: 48px;
   display: block;
-  color: #0070aa;
+  color:  #0a192f ;
 }
 
 .facts .counters p {

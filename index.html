@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>VG</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Javier VG | Backend & IT Developer</title>
+  <meta content="Desarrollador de Software y Responsable de TI" name="description">
+  <meta content="Laravel, PHP, PostgreSQL, Docker, Backend" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/VG.png" rel="icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,500,600,700|Fira+Code:300,400,500&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,12 +26,135 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Kelly - v2.1.1
-  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- Custom Programmer Dark Blue & Particles Styles -->
+  <style>
+    body {
+      background-color: #0a192f !important;
+      color: #8892b0;
+      overflow-x: hidden;
+    }
+    
+    #header {
+      background: rgba(10, 25, 47, 0.95);
+      border-bottom: 1px solid #1e293b;
+    }
+
+    #header .logo img {
+      max-height: 40px;
+      filter: drop-shadow(0 0 8px rgba(100, 255, 218, 0.4));
+    }
+
+    #header .nav-menu a {
+      color: #ccd6f6;
+    }
+
+    #header .nav-menu li.active > a, 
+    #header .nav-menu li:hover > a {
+      color: #64ffda;
+    }
+
+    .header-social-links a {
+      color: #a8b2d1;
+    }
+    .header-social-links a:hover {
+      color: #64ffda;
+    }
+
+    /* Hero Section - Deep Blue */
+    #hero {
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(135deg, #0a192f 0%, #0f172a 100%);
+      position: relative;
+    }
+
+    /* Canvas de partículas de fondo */
+    #particles-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    #hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    #hero h1 {
+      font-size: 56px;
+      font-weight: 700;
+      color: #e2e8f0;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    #hero h1 span {
+      color: #64ffda;
+    }
+
+    /* Code Terminal Effect Subtitle */
+    #hero .code-subtitle {
+      font-family: 'Fira Code', monospace;
+      font-size: 20px;
+      color: #64ffda;
+      background: rgba(17, 34, 64, 0.85);
+      padding: 10px 20px;
+      border-radius: 6px;
+      border: 1px solid #233554;
+      margin-top: 15px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+      min-height: 50px;
+      display: flex;
+      align-items: center;
+    }
+
+    #hero .code-subtitle::before {
+      content: "$ ";
+      color: #ff79c6;
+      margin-right: 8px;
+    }
+
+    /* Typing cursor animation */
+    .cursor {
+      display: inline-block;
+      width: 8px;
+      height: 20px;
+      background-color: #64ffda;
+      margin-left: 4px;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* Custom Button */
+    #hero .btn-about {
+      font-family: 'Fira Code', monospace;
+      font-weight: 500;
+      font-size: 15px;
+      letter-spacing: 1px;
+      display: inline-block;
+      padding: 10px 30px;
+      border-radius: 4px;
+      transition: 0.3s;
+      color: #64ffda;
+      border: 2px solid #64ffda;
+      background: rgba(10, 25, 47, 0.6);
+    }
+
+    #hero .btn-about:hover {
+      background: rgba(100, 255, 218, 0.1);
+      color: #64ffda;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
+    }
+  </style>
 </head>
 
 <body>
@@ -40,45 +163,74 @@
   <header id="header" class="fixed-top">
     <div class="container-fluid d-flex justify-content-between align-items-center">
 
-      <h1 class="logo"><img  src="./assets/img/logo.png" alt=""></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+ <h1 class="logo">
+        <a href="index.html" class="logo-svg-link">
+  <svg width="130" height="40" viewBox="0 0 130 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+    <defs>
+      <!-- Efecto de resplandor neón -->
+      <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="2.5" result="blur" />
+        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+      </filter>
+    </defs>
+
+    <!-- Contenedor geométrico tipo nodo / terminal -->
+    <rect x="2" y="4" width="32" height="32" rx="6" fill="#112240" stroke="#64ffda" stroke-width="1.5" filter="url(#neon-glow)" />
+
+    <!-- Iniciales VG dentro del recuadro -->
+    <text x="7" y="26" font-family="'Fira Code', monospace" font-size="17" font-weight="700" fill="#64ffda">
+      <>
+    </text>
+
+    <!-- Texto complementario del logotipo -->
+    <text x="44" y="21" font-family="'Raleway', sans-serif" font-size="13" font-weight="700" fill="#e2e8f0" letter-spacing="0.5px">
+      JAVIER <tspan fill="#64ffda">VG</tspan>
+    </text>
+
+    <text x="44" y="32" font-family="'Fira Code', monospace" font-size="9" font-weight="400" fill="#8892b0">
+      TI &amp; Developer
+    </text>
+
+    <!-- Cursor parpadeante de terminal -->
+    <rect x="119" y="24" width="6" height="2" fill="#64ffda">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
+    </rect>
+  </svg>
+</a>
+      </h1>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="index.html">Inicio</a></li>
           <li><a href="about.html">Perfil</a></li>
           <li><a href="resume.html">Resumen</a></li>
-          <!---
-           <li><a href="services.html">Servicos</a></li>
-          <li><a href="portfolio.html">Portafolio</a></li>
-          -->
-   
           <li><a href="contact.html">Contacto</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
       <div class="header-social-links">
-        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+        <a href="https://github.com/XavierVG20" class="twitter" target="_blank"><i class="icofont-github"></i></a>
         <a href="https://www.facebook.com/javier.velasque.562/" class="facebook"><i class="icofont-facebook"></i></a>
         <a href="https://www.instagram.com/xaviervg20/?hl=es-la" class="instagram"><i class="icofont-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/javier-velasque-a8b7331b1/" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+        <a href="https://www.linkedin.com/in/javier-velasque-a8b7331b1/" class="linkedin"><i class="icofont-linkedin"></i></a>
       </div>
 
     </div>
-
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
+    <!-- Canvas para efecto de partículas de código flotantes -->
+    <canvas id="particles-canvas"></canvas>
+
     <div class="container d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Javier VG</h1>
-      <h2>Tecnólogo Superior en Desarrollo de Software</h2>
-      <a href="./about.html" class="btn-about">Perfil</a>
+      <h1>Javier <span>VG</span></h1>
+      <div class="code-subtitle">
+        <span id="typed-text"></span><span class="cursor"></span>
+      </div>
+      <a href="./about.html" class="btn-about">&lt; Ver Perfil /&gt;</a>
     </div>
   </section><!-- End Hero -->
-
-  
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
@@ -97,6 +249,104 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Script para animación de partículas y efecto de escritura/borrado -->
+  <script>
+    // --- 1. Efecto de Escritura y Borrado (Typewriter) ---
+    const words = [
+      "Tecnólogo Superior en Desarrollo de Software",
+      "Responsable de TICS",
+      "Backend & Database Developer",
+
+    ];
+    
+    let i = 0;
+    let timer;
+
+    function typingEffect() {
+      let word = words[i].split("");
+      var loopTyping = function() {
+        if (word.length > 0) {
+          document.getElementById('typed-text').innerHTML += word.shift();
+        } else {
+          setTimeout(deletingEffect, 2000); // Pausa antes de empezar a borrar
+          return;
+        }
+        timer = setTimeout(loopTyping, 90); // Velocidad de escritura
+      };
+      loopTyping();
+    }
+
+    function deletingEffect() {
+      let word = words[i].split("");
+      var loopDeleting = function() {
+        if (word.length > 0) {
+          word.pop();
+          document.getElementById('typed-text').innerHTML = word.join("");
+        } else {
+          if (words.length > (i + 1)) {
+            i++;
+          } else {
+            i = 0;
+          }
+          setTimeout(typingEffect, 500); // Pausa antes de escribir la siguiente palabra
+          return;
+        }
+        timer = setTimeout(loopDeleting, 50); // Velocidad de borrado
+      };
+      loopDeleting();
+    }
+
+    typingEffect();
+
+
+    // --- 2. Animación de Partículas de Código en el Fondo ---
+    const canvas = document.getElementById('particles-canvas');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    const codeChars = ['{ }', '</>', '$', '0', '1', 'PHP', 'JS', 'SQL', '[]', '=>', ';', 'fn'];
+    let particles = [];
+    const particleCount = 35;
+
+    for (let i = 0; i < particleCount; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        text: codeChars[Math.floor(Math.random() * codeChars.length)],
+        speed: 0.5 + Math.random() * 1.5,
+        opacity: 0.15 + Math.random() * 0.35,
+        fontSize: 12 + Math.random() * 10
+      });
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      ctx.fillStyle = '#64ffda';
+      particles.forEach(p => {
+        ctx.globalAlpha = p.opacity;
+        ctx.font = `${p.fontSize}px 'Fira Code', monospace`;
+        ctx.fillText(p.text, p.x, p.y);
+
+        p.y -= p.speed;
+        if (p.y < -20) {
+          p.y = canvas.height + 20;
+          p.x = Math.random() * canvas.width;
+        }
+      });
+
+      requestAnimationFrame(animateParticles);
+    }
+
+    animateParticles();
+  </script>
 
 </body>
 

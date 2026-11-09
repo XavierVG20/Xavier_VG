@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Resumen - VG</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Resumen & Experiencia | Javier VG - Backend & Data Developer</title>
+  <meta content="CV, experiencia laboral, educación y certificaciones de Kevin Javier Velasque" name="description">
+  <meta content="Laravel, PHP, PostgreSQL, Docker, Machine Learning, Python, IT Manager" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/VG.png" rel="icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,500,600,700|Fira+Code:300,400,500&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,12 +26,171 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Kelly - v2.1.1
-  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- Custom Programmer Dark Blue & Particles Styles -->
+  <style>
+    body {
+      background-color: #0a192f !important;
+      color: #8892b0;
+      overflow-x: hidden;
+    }
+    
+    #header {
+      background: rgba(10, 25, 47, 0.95);
+      border-bottom: 1px solid #1e293b;
+      z-index: 10000;
+    }
+
+    #header .logo img {
+      max-height: 40px;
+      filter: drop-shadow(0 0 8px rgba(100, 255, 218, 0.4));
+    }
+
+    #header .nav-menu a {
+      color: #ccd6f6;
+    }
+
+    #header .nav-menu li.active > a, 
+    #header .nav-menu li:hover > a {
+      color: #64ffda;
+    }
+
+    .header-social-links a {
+      color: #a8b2d1;
+    }
+    .header-social-links a:hover {
+      color: #64ffda;
+    }
+
+    main {
+      background-color: #0a192f;
+      padding-top: 80px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Canvas de partículas idéntico a las demás páginas */
+    #particles-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 3;
+    }
+
+    .section-title h2 {
+      color: #e2e8f0;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      min-height: 40px;
+    }
+
+    .section-title h2::after {
+      background: #64ffda;
+    }
+
+    .section-title p {
+      color: #8892b0;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    /* Cursor de escritura en el título */
+    .cursor-typing {
+      display: inline-block;
+      width: 8px;
+      height: 24px;
+      background-color: #64ffda;
+      margin-left: 4px;
+      vertical-align: middle;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* Resume Section Customization */
+    .resume {
+      background: transparent;
+      color: #8892b0;
+    }
+
+    .resume .resume-title {
+      color: #64ffda;
+      font-family: 'Fira Code', monospace;
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #233554;
+      padding-bottom: 8px;
+    }
+
+    .resume .resume-item {
+      padding: 25px;
+      margin-top: -2px;
+      border-left: 2px solid #64ffda;
+      position: relative;
+      background: rgba(17, 34, 64, 0.85);
+      border-top: 1px solid #233554;
+      border-right: 1px solid #233554;
+      border-bottom: 1px solid #233554;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 25px;
+      box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+      transition: all 0.3s ease;
+    }
+
+    .resume .resume-item:hover {
+      transform: translateY(-3px);
+      border-color: #64ffda;
+      box-shadow: 0 15px 30px -10px rgba(100, 255, 218, 0.15);
+    }
+
+    .resume .resume-item h4 {
+      line-height: 18px;
+      font-size: 18px;
+      font-weight: 600;
+      font-family: 'Raleway', sans-serif;
+      color: #e2e8f0;
+      margin-bottom: 10px;
+    }
+
+    .resume .resume-item h5 {
+      font-size: 14px;
+      background: #1e293b;
+      padding: 5px 12px;
+      display: inline-block;
+      font-weight: 650;
+      margin-bottom: 15px;
+      color: #64ffda;
+      font-family: 'Fira Code', monospace;
+      border-radius: 4px;
+      border: 1px solid #334155;
+    }
+
+    .resume .resume-item p {
+      color: #8892b0;
+      font-size: 14px;
+    }
+
+    .resume .resume-item ul {
+      padding-left: 20px;
+      color: #8892b0;
+    }
+
+    .resume .resume-item ul li {
+      padding-bottom: 8px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 
 <body>
@@ -40,34 +199,63 @@
   <header id="header" class="fixed-top">
     <div class="container-fluid d-flex justify-content-between align-items-center">
 
-      <h1 class="logo"><a href="index.html"><img  src="./assets/img/logo.png" alt=""></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <h1 class="logo">
+        <a href="index.html" class="logo-svg-link">
+  <svg width="130" height="40" viewBox="0 0 130 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+    <defs>
+      <!-- Efecto de resplandor neón -->
+      <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="2.5" result="blur" />
+        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+      </filter>
+    </defs>
+
+    <!-- Contenedor geométrico tipo nodo / terminal -->
+    <rect x="2" y="4" width="32" height="32" rx="6" fill="#112240" stroke="#64ffda" stroke-width="1.5" filter="url(#neon-glow)" />
+
+    <!-- Iniciales VG dentro del recuadro -->
+    <text x="7" y="26" font-family="'Fira Code', monospace" font-size="17" font-weight="700" fill="#64ffda">
+      <>
+    </text>
+
+    <!-- Texto complementario del logotipo -->
+    <text x="44" y="21" font-family="'Raleway', sans-serif" font-size="13" font-weight="700" fill="#e2e8f0" letter-spacing="0.5px">
+      JAVIER <tspan fill="#64ffda">VG</tspan>
+    </text>
+
+    <text x="44" y="32" font-family="'Fira Code', monospace" font-size="9" font-weight="400" fill="#8892b0">
+      TI &amp; Developer
+    </text>
+
+    <!-- Cursor parpadeante de terminal -->
+    <rect x="119" y="24" width="6" height="2" fill="#64ffda">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
+    </rect>
+  </svg>
+</a>
+      </h1>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="about.html">Perfil</a></li>
           <li class="active"><a href="resume.html">Resumen</a></li>
-          <!---
-           <li><a href="services.html">Servicos</a></li>
-          <li><a href="portfolio.html">Portafolio</a></li>
-          -->
-   
-          <li  ><a href="contact.html">Contacto</a></li>
+          <li><a href="contact.html">Contacto</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
       <div class="header-social-links">
-        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
-        <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
-        <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+        <a href="https://github.com/XavierVG20" class="twitter" target="_blank"><i class="icofont-github"></i></a>
+        <a href="https://www.facebook.com/javier.velasque.562/" class="facebook" target="_blank"><i class="icofont-facebook"></i></a>
+        <a href="https://www.instagram.com/xaviervg20/?hl=es-la" class="instagram" target="_blank"><i class="icofont-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/javier-velasque-a8b7331b1/" class="linkedin" target="_blank"><i class="icofont-linkedin"></i></a>
       </div>
 
     </div>
-
   </header><!-- End Header -->
+
+  <!-- Canvas de partículas al frente -->
+  <canvas id="particles-canvas"></canvas>
 
   <main id="main">
 
@@ -76,79 +264,95 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Resumen</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2><span id="typed-title"></span><span class="cursor-typing"></span></h2>
+          <p>Trayectoria académica formal, experiencia profesional en gerencia de TI y desarrollo de software financiero, respaldada por certificaciones internacionales.</p>
         </div>
 
         <div class="row">
+          <!-- Columna Izquierda: Educación y Experiencia Laboral -->
           <div class="col-lg-6">
-            <h3 class="resume-title">Educacion</h3>
+            <h3 class="resume-title">// Educación</h3>
+            
             <div class="resume-item">
-              <h4>Instituto Superior
-                Tecnológico Vicente
-                León
-                </h4>
+              <h4>Instituto Superior Tecnológico Vicente León</h4>
               <h5>2017 - 2021</h5>
-              <p><em>Tecnólogo Superior en Desarrollo de
-                software</em></p>
+              <p><em>Tecnólogo Superior en Desarrollo de Software</em></p>
+              <p>Formación especializada en ingeniería de software, bases de datos y arquitectura web.</p>
             </div>
+
             <div class="resume-item">
-              <h4>Colegio Técnico Pujilí
-              </h4>
+              <h4>Colegio Técnico Pujilí</h4>
               <h5>2011 - 2017</h5>
-              <p><em>Bachiller Técnico Industrial en
-                Maquinas Eléctricas</em></p>
-              
+              <p><em>Bachiller Técnico Industrial en Máquinas Eléctricas</em></p>
+              <p>Fundamentos en electrónica, sistemas electromecánicos y mantenimiento de equipos industriales.</p>
+            </div>
+
+            <h3 class="resume-title">// Experiencia Laboral</h3>
+
+            <div class="resume-item">
+              <h4>COAC Pujilí Ltda.</h4>
+              <h5>Ene 2025 - Sep 2026 </h5>
+              <p><em>Responsable de TICS </em></p>
+              <ul>
+                <li>Gestión y administración de infraestructura tecnológica (hardware, redes y servidores).</li>
+                <li>Planificación y ejecución de proyectos tecnológicos, orientados a la modernización, automatización y 
+optimización de procesos institucionales.  </li>
+                <li>Gestión y supervisión de proveedores tecnológicos, contratos, garantías y servicios especializados</li>
+                <li>Elaboración de informes técnicos, documentación, procedimientos y reportes de gestión de TICs para el 
+seguimiento y toma de decisiones</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>COAC Virgen del Cisne</h4>
+              <h5>May 2019 - Jun 2019</h5>
+              <p><em>Practicante de Sistemas</em></p>
+              <ul>
+                <li>Mantenimiento, organización y digitalización de archivos de oficina.</li>
+                <li>Soporte técnico integral a usuarios de equipos y software interno.</li>
+                <li>Asistente en desarrollo de módulos de programación.</li>
+              </ul>
             </div>
           </div>
+
+          <!-- Columna Derecha: Certificaciones y Especializaciones -->
           <div class="col-lg-6">
-            <h3 class="resume-title">Experiencia Laboral</h3>
+            <h3 class="resume-title">// Certificaciones Y Seminarios</h3>
+            
             <div class="resume-item">
-              <h4>COAC VIRGEN DEL CISNE</h4>
-              <h5>MAY 2019 - JUN 2019</h5>
-              <p><em> Practicante de Sistemas</em></p>
-              <p>
-              <ul>
-                <li>Mantenimiento y organización de los archivos de la oficina.</li>
-                <li>Ayudante de soporte técnico. </li>
-                <li>Asistente de programador</li>
-              </ul>
-              </p>
+              <h4>Especialización en Ciencia de Datos & Machine Learning</h4>
+              <h5>En Curso / Formación Avanzada</h5>
+              <p>Modelamiento financiero, Python, R, estadística avanzada y Machine Learning aplicado a riesgos.</p>
             </div>
 
-            <h3 class="resume-title">Certificaciones Y Seminarios </h3>
             <div class="resume-item">
-              <h4>Certificado Scrum Foundations Professional
-                Certificate (SFPC)              
-                </h4>
-              
-              <p><em>12 DE JUNIO DEL 2021</em></p>
+              <h4>Virtualización y Respaldos con VMware vSphere & Veeam</h4>
+              <h5>Junio 2025</h5>
+              <p>Administración y configuración de entornos virtualizados y políticas de respaldo empresarial (BlueIT).</p>
             </div>
-            <div class="resume-item">
-              <h4>Seminario Tendencias Actuales De Programación
-              </h4>
-              <p><em>24 DE MARZO DEL 2021
-              </em></p>
-            </div>
-            <div class="resume-item">
-              <h4>Seminario De Gestión De Proyectos Con Scrum
-              </h4>
-              <p><em>1 DE AGOSTO DEL 2020
-              </em></p>
-            </div>
-            <div class="resume-item">
-              <h4>Seminario deSistemas Informáticos de la creación de
-                data driven
-              </h4>
-              <p><em>03 DE OCTUBRE DEL 2019
 
-              </em></p>
-            </div>
             <div class="resume-item">
-              <h4>Seminario De Programación Web
-              </h4>
-              <p><em>11 DE SEPTIEMBRE DEL 2019
-              </em></p>
+              <h4>Scrum Foundations Professional Certificate (SFPC)</h4>
+              <h5>Julio 2021</h5>
+              <p>Dominio de marcos de trabajo ágiles para gestión y desarrollo eficiente de proyectos de software.</p>
+            </div>
+
+            <div class="resume-item">
+              <h4>Cultura Data-Driven en Entidades Públicas y Privadas</h4>
+              <h5>Octubre 2019</h5>
+              <p>Fortalecimiento del perfil profesional para la toma de decisiones basada en datos.</p>
+            </div>
+
+            <div class="resume-item">
+              <h4>Seguros de Depósitos y Liquidez (COSEDE)</h4>
+              <h5>Noviembre 2024</h5>
+              <p>Capacitación oficial sobre normativas y fondos del sistema financiero cooperativo.</p>
+            </div>
+
+            <div class="resume-item">
+              <h4>Seminarios de Programación Web y Tendencias Actuales</h4>
+              <h5>2021</h5>
+              <p>Actualización constante en frameworks modernos, arquitectura MVC y desarrollo backend.</p>
             </div>
           </div>
         </div>
@@ -157,8 +361,6 @@
     </section><!-- End Resume Section -->
 
   </main><!-- End #main -->
-
-
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
@@ -177,6 +379,98 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Scripts de Escritura Automática y Partículas -->
+  <script>
+    // --- 1. Efecto de Escritura y Borrado Automático en el Título Principal ---
+    const titles = [
+      "RESUMEN PROFESIONAL",
+      "EXPERIENCIA & TRAYECTORIA",
+      "CERTIFICACIONES & CURSOS"
+    ];
+    
+    let titleIndex = 0;
+
+    function typeTitle() {
+      let currentWord = titles[titleIndex].split("");
+      let loopTyping = function() {
+        if (currentWord.length > 0) {
+          document.getElementById('typed-title').innerHTML += currentWord.shift();
+        } else {
+          setTimeout(deleteTitle, 2200);
+          return;
+        }
+        setTimeout(loopTyping, 90);
+      };
+      loopTyping();
+    }
+
+    function deleteTitle() {
+      let currentWord = titles[titleIndex].split("");
+      let loopDeleting = function() {
+        if (currentWord.length > 0) {
+          currentWord.pop();
+          document.getElementById('typed-title').innerHTML = currentWord.join("");
+        } else {
+          titleIndex = (titleIndex + 1) % titles.length;
+          setTimeout(typeTitle, 500);
+          return;
+        }
+        setTimeout(loopDeleting, 50);
+      };
+      loopDeleting();
+    }
+
+    typeTitle();
+
+
+    // --- 2. Animación de Partículas Pequeñas y Sutiles al Frente ---
+    const canvas = document.getElementById('particles-canvas');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    const codeChars = ['{ }', '</>', '$', '0', '1', 'PHP', 'JS', 'SQL', '[]', '=>', ';', 'fn', 'Docker', 'ML', 'Python'];
+    let particles = [];
+    const particleCount = 35;
+
+    for (let i = 0; i < particleCount; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        text: codeChars[Math.floor(Math.random() * codeChars.length)],
+        speed: 0.5 + Math.random() * 1.5,
+        opacity: 0.15 + Math.random() * 0.35,
+        fontSize: 10 + Math.random() * 4
+      });
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      ctx.fillStyle = '#64ffda';
+      particles.forEach(p => {
+        ctx.globalAlpha = p.opacity;
+        ctx.font = `${p.fontSize}px 'Fira Code', monospace`;
+        ctx.fillText(p.text, p.x, p.y);
+
+        p.y -= p.speed;
+        if (p.y < -20) {
+          p.y = canvas.height + 20;
+          p.x = Math.random() * canvas.width;
+        }
+      });
+
+      requestAnimationFrame(animateParticles);
+    }
+
+    animateParticles();
+  </script>
 
 </body>
 

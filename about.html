@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Perfil - VG</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Perfil & Proyectos | Javier VG - Backend & Data Developer</title>
+  <meta content="Perfil profesional, habilidades, Machine Learning y proyectos de Kevin Javier Velasque" name="description">
+  <meta content="Laravel, PHP, PostgreSQL, Docker, Machine Learning, Python, Data Science" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/VG.png" rel="icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,500,600,700|Fira+Code:300,400,500&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,12 +26,241 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Kelly - v2.1.1
-  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- Custom Programmer Dark Blue & Particles Styles -->
+  <style>
+    body {
+      background-color: #0a192f !important;
+      color: #8892b0;
+      overflow-x: hidden;
+    }
+    
+    #header {
+      background: rgba(10, 25, 47, 0.95);
+      border-bottom: 1px solid #1e293b;
+      z-index: 10000;
+    }
+
+    #header .logo img {
+      max-height: 40px;
+      filter: drop-shadow(0 0 8px rgba(100, 255, 218, 0.4));
+    }
+
+    #header .nav-menu a {
+      color: #ccd6f6;
+    }
+
+    #header .nav-menu li.active > a, 
+    #header .nav-menu li:hover > a {
+      color: #64ffda;
+    }
+
+    .header-social-links a {
+      color: #a8b2d1;
+    }
+    .header-social-links a:hover {
+      color: #64ffda;
+    }
+
+    main {
+      background-color: #0a192f;
+      padding-top: 80px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Canvas de partículas al frente pero permitiendo clics */
+    #particles-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 3;
+    }
+
+    .section-title h2 {
+      color: #e2e8f0;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      min-height: 40px;
+    }
+
+    .section-title h2::after {
+      background: #64ffda;
+    }
+
+    .section-title p {
+      color: #8892b0;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    /* Cursor de escritura en el título */
+    .cursor-typing {
+      display: inline-block;
+      width: 8px;
+      height: 24px;
+      background-color: #64ffda;
+      margin-left: 4px;
+      vertical-align: middle;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* About Section */
+    .about {
+      background: transparent;
+      color: #8892b0;
+    }
+
+    .about .content ul li {
+      color: #ccd6f6;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    .about .content ul strong {
+      color: #64ffda;
+      font-family: 'Fira Code', monospace;
+    }
+
+    .about .content p {
+      color: #8892b0;
+      background: rgba(17, 34, 64, 0.9);
+      padding: 20px;
+      border-left: 3px solid #64ffda;
+      border-radius: 6px;
+      margin-top: 25px;
+      border: 1px solid #233554;
+      box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+    }
+
+    .about img {
+      border-radius: 8px;
+      border: 2px solid #233554;
+      box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+    }
+
+    /* Skills Grid Cards */
+    .skills-grid-section {
+      background: rgba(15, 23, 42, 0.95);
+      padding: 60px 0;
+      border-top: 1px solid #1e293b;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    .skill-card {
+      background: rgba(17, 34, 64, 0.85);
+      border: 1px solid #233554;
+      border-radius: 8px;
+      padding: 25px;
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      border-color: #64ffda;
+      box-shadow: 0 10px 30px -10px rgba(100, 255, 218, 0.15);
+    }
+
+    .skill-card h3 {
+      font-family: 'Fira Code', monospace;
+      color: #64ffda;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-tag {
+      background: #1e293b;
+      color: #ccd6f6;
+      padding: 5px 12px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-family: 'Fira Code', monospace;
+      border: 1px solid #334155;
+    }
+
+    /* Proyectos Destacados Section */
+    .projects-section {
+      padding: 60px 0;
+      background: transparent;
+    }
+
+    .project-card {
+      background: rgba(17, 34, 64, 0.85);
+      border: 1px solid #233554;
+      border-radius: 8px;
+      padding: 30px;
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: #64ffda;
+      box-shadow: 0 15px 30px -10px rgba(2, 12, 27, 0.9);
+    }
+
+    .project-card h3 {
+      color: #e2e8f0;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .project-card p {
+      color: #8892b0;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    /* Cursos y Certificaciones */
+    .courses-section {
+      background: rgba(15, 23, 42, 0.95);
+      padding: 60px 0;
+      border-top: 1px solid #1e293b;
+    }
+
+    .course-item {
+      background: rgba(17, 34, 64, 0.85);
+      border-left: 3px solid #64ffda;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      border-radius: 0 6px 6px 0;
+      border-top: 1px solid #233554;
+      border-right: 1px solid #233554;
+      border-bottom: 1px solid #233554;
+    }
+
+    .course-item h4 {
+      color: #ccd6f6;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .course-item span {
+      color: #64ffda;
+      font-size: 13px;
+      font-family: 'Fira Code', monospace;
+    }
+  </style>
 </head>
 
 <body>
@@ -40,34 +269,63 @@
   <header id="header" class="fixed-top">
     <div class="container-fluid d-flex justify-content-between align-items-center">
 
-      <h1 class="logo"><a href="index.html"><img  src="./assets/img/logo.png" alt=""></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+   <h1 class="logo">
+        <a href="index.html" class="logo-svg-link">
+  <svg width="130" height="40" viewBox="0 0 130 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+    <defs>
+      <!-- Efecto de resplandor neón -->
+      <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="2.5" result="blur" />
+        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+      </filter>
+    </defs>
+
+    <!-- Contenedor geométrico tipo nodo / terminal -->
+    <rect x="2" y="4" width="32" height="32" rx="6" fill="#112240" stroke="#64ffda" stroke-width="1.5" filter="url(#neon-glow)" />
+
+    <!-- Iniciales VG dentro del recuadro -->
+    <text x="7" y="26" font-family="'Fira Code', monospace" font-size="17" font-weight="700" fill="#64ffda">
+      <>
+    </text>
+
+    <!-- Texto complementario del logotipo -->
+    <text x="44" y="21" font-family="'Raleway', sans-serif" font-size="13" font-weight="700" fill="#e2e8f0" letter-spacing="0.5px">
+      JAVIER <tspan fill="#64ffda">VG</tspan>
+    </text>
+
+    <text x="44" y="32" font-family="'Fira Code', monospace" font-size="9" font-weight="400" fill="#8892b0">
+      TI &amp; Developer
+    </text>
+
+    <!-- Cursor parpadeante de terminal -->
+    <rect x="119" y="24" width="6" height="2" fill="#64ffda">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
+    </rect>
+  </svg>
+</a>
+      </h1>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li><a href="index.html">Inicio</a></li>
-          <li  class="active"><a href="about.html">Perfil</a></li>
+          <li class="active"><a href="about.html">Perfil</a></li>
           <li><a href="resume.html">Resumen</a></li>
-          <!---
-           <li><a href="services.html">Servicos</a></li>
-          <li><a href="portfolio.html">Portafolio</a></li>
-          -->
-   
-          <li  ><a href="contact.html">Contacto</a></li>
+          <li><a href="contact.html">Contacto</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
       <div class="header-social-links">
-        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
-        <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
-        <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+        <a href="https://github.com/XavierVG20" class="twitter" target="_blank"><i class="icofont-github"></i></a>
+        <a href="https://www.facebook.com/javier.velasque.562/" class="facebook" target="_blank"><i class="icofont-facebook"></i></a>
+        <a href="https://www.instagram.com/xaviervg20/?hl=es-la" class="instagram" target="_blank"><i class="icofont-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/javier-velasque-a8b7331b1/" class="linkedin" target="_blank"><i class="icofont-linkedin"></i></a>
       </div>
 
     </div>
-
   </header><!-- End Header -->
+
+  <!-- Canvas de partículas al frente con z-index correcto -->
+  <canvas id="particles-canvas"></canvas>
 
   <main id="main">
 
@@ -76,41 +334,37 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>PERFIL PERSONAL</h2>
-          <p>Soy una persona con un gran
-            sentido del compromiso y la
-            responsabilidad que busca
-            aportar con todo su contingente
-            dentro de la empresa que me dé
-            la oportunidad de crecer
-            profesional y humanamente</p>
+          <h2><span id="typed-title"></span><span class="cursor-typing"></span></h2>
+
+          <p>Soy una persona con un gran sentido del compromiso y la responsabilidad que busca aportar con todo su contingente dentro de la empresa que me dé la oportunidad de crecer profesional y humanamente
+            
+          </p>
         </div>
 
         <div class="row">
-          <div class="col-lg-4">
-            <img src="assets/img/0504361809.jpg" class="img-fluid" width="auto" height="75%" alt="">
-          </div>
+          <!--<div class="col-lg-4">
+            <img src="assets/img/0504361809.jpg" class="img-fluid" alt="Kevin Javier Velasque">
+          </div> -->
           <div class="col-lg-8 pt-4 pt-lg-0 content">
-  
+ 
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="icofont-rounded-right"></i> <strong>Nombres:</strong> Kevin JavierVelasque Guanotasig</li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Nombres:</strong> Kevin Javier Velasque G.</li>
                   <li><i class="icofont-rounded-right"></i> <strong>Celular:</strong> +593 97 904 0583</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>Ciudad:</strong>Pujili</li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Ubicación:</strong> Pujilí, Cotopaxi</li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="icofont-rounded-right"></i> <strong>Edad:</strong> 21</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>Titulo:</strong> Tecnólogo Superior en Desarrollo de
-                    software</li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Rol Actual:</strong> Programador Freelance</li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Título:</strong> Tecnólogo en Desarrollo de Software</li>
                   <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> kjaviervelasque@hotmail.com</li>
                 </ul>
               </div>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi officia sint commodi dignissimos sequi aut ad dolorum ullam dicta cum culpa odio earum nisi, numquam recusandae quae voluptates fugiat cupiditate.
+              Especializado en diseñar e implementar soluciones tecnológicas de alto rendimiento. Conocimentos en entornos con Docker, despliegue de sistemas en Linux y la integración de modelos analíticos orientados a la toma de decisiones financieras.
             </p>
           </div>
         </div>
@@ -118,182 +372,162 @@
       </div>
     </section><!-- End About Section -->
 
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills">
+    <!-- ======= Habilidades Técnicas (Modo Tarjetas Neón) ======= -->
+    <section class="skills-grid-section">
       <div class="container" data-aos="fade-up">
-
         <div class="section-title">
-          <h2>Habilidades</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Habilidades & Stack Tecnológico</h2>
+          <p>Ecosistema técnico especializado en desarrollo web robusto, infraestructura y análisis de datos.</p>
         </div>
 
-        <div class="row skills-content">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="skill-card">
+              <h3>// Backend</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Laravel 12</span>
+                <span class="skill-tag">PHP 8.2</span>
+                <span class="skill-tag">Spring Boot</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">APIs REST</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="skill-card">
+              <h3>// Datasets & DBs</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">Informix</span>
+                <span class="skill-tag">SQL Server</span>
+                <span class="skill-tag">MongoDB</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="skill-card">
+              <h3>// DevOps & Cloud</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Linux</span>
+                <span class="skill-tag">VMware</span>
+                <span class="skill-tag">Proxmox VE</span>
+                <span class="skill-tag">Git / GitHub</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="skill-card">
+              <h3>// Data & ML</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">R Studio</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">TensorFlow</span>
+                <span class="skill-tag">Scikit-Learn</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Proyectos Destacados ======= -->
+    <section class="projects-section">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Proyectos Destacados</h2>
+          <p>Soluciones de software institucionales desarrolladas bajo arquitecturas seguras y escalables.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <div class="project-card">
+              <h3>Sistema de Control de Expedientes</h3>
+              <p>Plataforma automatizada para la gestión, control y revisión multinivel de expedientes de crédito con roles de usuario y votación de comités.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Laravel 12</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">Docker</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4">
+            <div class="project-card">
+              <h3>Portal Web Institucional Seguro</h3>
+              <p>Reingeniería completa del portal web corporativo financiero con módulos dinámicos, gestión de reclamos y cumplimiento estricto LOPDP.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Laravel</span>
+                <span class="skill-tag">Security Headers</span>
+                <span class="skill-tag">cPanel</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4">
+            <div class="project-card">
+              <h3>Modelo de Crédito & Machine Learning</h3>
+              <p>Tubería de Machine Learning en Python para clasificación de riesgo crediticio utilizando árboles de decisión y optimización de hiperparámetros.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Scikit-Learn</span>
+                <span class="skill-tag">Pandas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Cursos y Formación Especializada ======= -->
+    <section class="courses-section">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Cursos & Especializaciones</h2>
+          <p>Capacitación continua en ciencia de datos, infraestructura, virtualización y normativas financieras.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="course-item">
+              <h4>Especialización en Ciencia de Datos, Machine Learning & Modelamiento Financiero</h4>
+              <span>Grupo CEUPERU / Formación Avanzada</span>
+            </div>
+            <div class="course-item">
+              <h4>Virtualización y Respaldos de Servidores (VMware vSphere & Veeam Backup)</h4>
+              <span>BlueIT</span>
+            </div>
+            <div class="course-item">
+              <h4>Scrum Foundations Professional Certificate</h4>
+              <span>CertiProf</span>
+            </div>
+          </div>
 
           <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill">HTML <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="85"></div>
-              </div>
+            <div class="course-item">
+              <h4>Cultura Data Driven en Entidades Públicas y Privadas</h4>
+              <span>Seminario de Especialización en Datos</span>
             </div>
-
-            <div class="progress">
-              <span class="skill">CSS <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+            <div class="course-item">
+              <h4>Fondos del Seguro de Depósitos y Liquidez (COSEDE)</h4>
+              <span>Certificaciones del Sector Financiero Cooperativo</span>
             </div>
-
-            <div class="progress">
-              <span class="skill">JavaScript <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+            <div class="course-item">
+              <h4>Seminario de Tendencias Actuales y Programación Web Avanzada</h4>
+              <span>Instituto Superior Tecnológico Vicente León</span>
             </div>
-
           </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill">PHP <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Java <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">MySQL <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
         </div>
-
       </div>
-    </section><!-- End Skills Section -->
-
-    <!-- ======= Facts Section 
-    <section id="facts" class="facts">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Facts</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row counters">
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">232</span>
-            <p>Clients</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">521</span>
-            <p>Projects</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">1,463</span>
-            <p>Hours Of Support</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">15</span>
-            <p>Hard Workers</p>
-          </div>
-
-        </div>
-
-      </div>
-    </section> -->
-
-    <!-- ======= Testimonials Section
-    <section id="testimonials" class="testimonials">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Testimonials</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="owl-carousel testimonials-carousel">
-
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-            <h3>Saul Goodman</h3>
-            <h4>Ceo &amp; Founder</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-            <h3>Sara Wilsson</h3>
-            <h4>Designer</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-            <h3>Jena Karlis</h3>
-            <h4>Store Owner</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-            <h3>Matt Brandon</h3>
-            <h4>Freelancer</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-            <h3>John Larson</h3>
-            <h4>Entrepreneur</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-    </section> -->
+    </section>
 
   </main><!-- End #main -->
 
- 
   <div id="preloader"></div>
   <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
 
@@ -311,6 +545,98 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Scripts de Partículas y Efecto de Escritura Automática -->
+  <script>
+    // --- 1. Efecto de Escritura y Borrado Automático en el Título Principal ---
+    const titles = [
+      "PERFIL PROFESIONAL",
+      "DESARROLLADOR DE SOFTWARE",
+      "RESPONSABLE DE TICS"
+    ];
+    
+    let titleIndex = 0;
+
+    function typeTitle() {
+      let currentWord = titles[titleIndex].split("");
+      let loopTyping = function() {
+        if (currentWord.length > 0) {
+          document.getElementById('typed-title').innerHTML += currentWord.shift();
+        } else {
+          setTimeout(deleteTitle, 2200);
+          return;
+        }
+        setTimeout(loopTyping, 90);
+      };
+      loopTyping();
+    }
+
+    function deleteTitle() {
+      let currentWord = titles[titleIndex].split("");
+      let loopDeleting = function() {
+        if (currentWord.length > 0) {
+          currentWord.pop();
+          document.getElementById('typed-title').innerHTML = currentWord.join("");
+        } else {
+          titleIndex = (titleIndex + 1) % titles.length;
+          setTimeout(typeTitle, 500);
+          return;
+        }
+        setTimeout(loopDeleting, 50);
+      };
+      loopDeleting();
+    }
+
+    typeTitle();
+
+
+    // --- 2. Animación de Partículas Pequeñas y Sutiles al Frente ---
+    const canvas = document.getElementById('particles-canvas');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    const codeChars = ['{ }', '</>', '$', '0', '1', 'PHP', 'JS', 'SQL', '[]', '=>', ';', 'fn', 'Docker', 'ML', 'Python'];
+    let particles = [];
+    const particleCount = 35;
+
+    for (let i = 0; i < particleCount; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        text: codeChars[Math.floor(Math.random() * codeChars.length)],
+        speed: 0.5 + Math.random() * 1.5,
+        opacity: 0.15 + Math.random() * 0.35,
+        fontSize: 10 + Math.random() * 4
+      });
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      ctx.fillStyle = '#64ffda';
+      particles.forEach(p => {
+        ctx.globalAlpha = p.opacity;
+        ctx.font = `${p.fontSize}px 'Fira Code', monospace`;
+        ctx.fillText(p.text, p.x, p.y);
+
+        p.y -= p.speed;
+        if (p.y < -20) {
+          p.y = canvas.height + 20;
+          p.x = Math.random() * canvas.width;
+        }
+      });
+
+      requestAnimationFrame(animateParticles);
+    }
+
+    animateParticles();
+  </script>
 
 </body>
 
